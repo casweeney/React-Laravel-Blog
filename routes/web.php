@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $blogArticles = DB::table('blogs')->get();
+    return $blogArticles;
 });
